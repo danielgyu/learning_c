@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  multi_dimension.c
+ *       Filename:  main.c
  *
  *    Description:  
  *
  *        Version:  1.0
- *        Created:  2021/03/20 00시 53분 06초
+ *        Created:  2021/03/21 23시 15분 18초
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -18,23 +18,19 @@
 
 #include <stdio.h>
 
+#include "minion.h"
+
+extern unsigned int g_hp;
+extern unsigned int g_strength;
+
 int main(void)
 {
-    int grades[2][3] = {
-        { 65, 90, 75 },
-        { 70, 40, 50 }
-    };
-    int average = 0;
-    int i, j;
+    printf("g_hp: %d\n", g_hp);
+    printf("g_strength: %d\n", g_strength);
 
-    for (i=0; i<2; ++i) {
-        for (j=0; j<3; ++j) {
-            average += grades[i][j];
-        }
-    }
-    average /= (i * j);
+    go_berserk();
 
-    printf("average is %d\n", average);
-
-    return 0;
+    printf("berserk applied\n");
+    printf("g_hp: %d\n", g_hp);
+    printf("g_strength: %d\n", g_strength);
 }
