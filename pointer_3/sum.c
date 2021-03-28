@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  backreference.c
+ *       Filename:  sum.c
  *
  *    Description:  
  *
  *        Version:  1.0
- *        Created:  2021/03/26 09시 40분 31초
+ *        Created:  2021/03/27 12시 51분 10초
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -15,16 +15,20 @@
  *
  * =====================================================================================
  */
-
 #include <stdio.h>
 
-int main()
+void add(int a, int b, int* c)
 {
-    int num = 10;
-    int* num_address = &num;
+    int sum = a + b;
+    *c = sum;
+}
 
-    printf("value in num_address is %d\n", *num_address);
-    if (num == *num_address) {
-        printf("num equals *num_address!");
-    }
+int main(void)
+{
+    int n1 = 1;
+    int n2 = 3;
+    int sum;
+
+    add(n1, n2, &sum);
+    printf("the sum is %d\n", sum);
 }
