@@ -18,7 +18,11 @@ int main(void)
 	name.firstname = firstname;
 
 	clone = name;
-	
-	printf("name add: %p\n", (void*)&name);
-	printf("clone add: %p\n", (void*)clone);
+	/*name.lastname[0] = 'N';*/
+
+	printf("%d\n", &name == &clone);
+	printf("%d\n", (void*)name.lastname == (void*)clone.lastname);
+	printf("name: %s\n", name.lastname);
+	printf("clone: %s\n", clone.lastname);
+
 }
