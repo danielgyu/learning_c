@@ -27,4 +27,6 @@ int main(void)
 
 	printf("%d\n", user.id);
 	printf("%s\n", user.name.firstname);
+
+	printf("%lu\n", sizeof(user_info_t));
 }
