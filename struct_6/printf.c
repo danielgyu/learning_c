@@ -1,4 +1,8 @@
-static void print_int_recursive(unsigned dint val)
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
+
+static void print_int_recursive(unsigned int val)
 {
 	if (val == 0) {
 		return;
@@ -38,12 +42,15 @@ void printf_simple(const char* format, ...)
 					putchar(*format);
 					break;
 			}
+			++format;
 		}
 	}
+	va_end(ap);
 }
 
 
 int main(void)
 {
-	printf_simple()
+	printf_simple("c\n", 'A');
+	printf_simple("d\n", 10);
 }
