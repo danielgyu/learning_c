@@ -23,4 +23,9 @@ int main(void)
 	}
 	printf("mem1; %p\n", mem1);
 	printf("mem3: %p\n", mem3);
+
+	/* mem1 already freed by realloc of mem3 */
+
+	free(mem2);
+	free(mem3);
 }
