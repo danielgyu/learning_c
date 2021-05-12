@@ -6,7 +6,6 @@ void insert_sorted(node_t** phead, int n)
 	new_node = malloc(sizeof(node_t));
 	new_node->value = n;
 
-	pp = phead;
 	while(*pp != NULL) {
 		if((*pp)->value >= n) {
 			break;
